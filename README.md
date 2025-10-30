@@ -2,124 +2,113 @@
 
 Overview
 
-The University Management System (UMS) is a comprehensive platform designed to manage and streamline the academic and administrative processes within a university. The system provides modules for handling student information, faculty details, course management, attendance, examination records, and other essential operations. The objective is to enhance efficiency, accuracy, and accessibility of university-related data through digital automation.
+The University Management System is a Java-based desktop application designed to simplify and automate administrative and academic operations within a university. The system provides features for managing students, faculty, courses, examinations, and fee structures through an interactive graphical interface. It enables administrators, teachers, and students to efficiently handle institutional data and streamline key university processes.
 
-Problem Statement
+Objective
 
-Traditional university management relies heavily on manual record-keeping, which often leads to inefficiencies, data inconsistency, and limited accessibility. This project aims to develop a centralized digital solution that automates administrative tasks, improves communication between students and staff, and simplifies academic data management.
+The primary objective of this system is to create a centralized platform for managing university data digitally. It reduces manual effort, minimizes errors, and enhances accessibility for administrators and faculty members. The project demonstrates practical implementation of object-oriented programming (OOP), database connectivity, and GUI-based design using Java Swing.
 
-Objectives
+Features
+1. Student Management
 
-To provide a centralized database for managing student, faculty, and course information.
+Add new students with personal and academic details
 
-To automate repetitive administrative tasks and reduce paperwork.
+Update and delete student records
 
-To ensure data accuracy, security, and accessibility.
+View complete student information
 
-To enable quick report generation for decision-making.
+2. Faculty Management
 
-System Features
+Add and manage faculty details
 
-Student Management
+Assign subjects and departments
 
-Registration and profile management
+View and update teacher information
 
-Academic performance tracking
+3. Course and Examination Module
 
-Attendance and course enrollment
+Enter and manage examination details
 
-Faculty Management
+Record and update student marks
 
-Faculty profile and subject assignment
+Generate grade reports
 
-Attendance tracking
+4. Fee and Leave Management
 
-Timetable scheduling
+Maintain and display fee structure
 
-Course and Department Management
+Manage student and teacher leave records
 
-Course creation and updates
+Track and update fee payment status
 
-Department-wise categorization
+5. Authentication and Security
 
-Linking students and faculty to courses
+Secure login for administrators
 
-Examination and Results Module
+Controlled access for faculty and staff
 
-Marks entry and grade calculation
-
-Automated report card generation
-
-Administrative Controls
-
-Role-based access for Admin, Faculty, and Students
-
-Secure login and authentication
+Database-driven user verification
 
 System Architecture
 
-The architecture follows a three-tier model consisting of:
+The project follows a modular architecture where each functionality is implemented in a separate Java class. The modules are connected through a central control class and database layer.
 
-Presentation Layer: User interface for admin, faculty, and students.
+Example Modules (from source files):
 
-Application Layer: Business logic and functional modules implemented using Python.
+Login.java – User authentication
 
-Database Layer: MySQL database storing all student, faculty, and course-related data.
+AddStudent.java, StudentDetails.java – Student management
+
+AddFaculty.java, TeacherDetails.java – Faculty management
+
+EnterMarks.java, Marks.java – Examination and results
+
+FeeStructure.java, StudentFeeForm.java – Fee management
+
+Conn.java – Handles database connection using JDBC
+
+main_class.java – Application entry point
+
+Splash.java – Application launch screen
 
 Technologies Used
 
-Frontend: HTML, CSS, JavaScript
+Programming Language: Java
 
-Backend: Python (Flask/Django)
+GUI Framework: Swing (Java AWT components)
 
 Database: MySQL
 
-Tools: Visual Studio Code, MySQL Workbench
+Database Connectivity: JDBC (Java Database Connectivity)
 
-Environment: Localhost / XAMPP or Flask Server
+IDE: IntelliJ IDEA / Eclipse / NetBeans
 
-Database Design
+Tools: MySQL Workbench, XAMPP
 
-The system uses a relational database schema consisting of multiple interconnected tables:
+Database Structure
 
-Students: student_id, name, department, course_enrolled, attendance, grades
+The system uses a MySQL database with multiple tables such as:
 
-Faculty: faculty_id, name, department, subjects_assigned
+student – Contains student personal and academic details
 
-Courses: course_id, course_name, credits, department_id
+faculty – Stores faculty data and assigned courses
 
-Departments: department_id, department_name
+marks – Records student marks and grades
 
-Admin: admin_id, username, password
+fee – Contains fee structure and payment records
 
-Entity-Relationship (ER) and Data Flow Diagrams (DFDs) were developed to visualize system processes and data flow.
+leave_student and leave_teacher – Manage leave requests
 
-Implementation
+Database connection is established using the Conn.java class, which defines the connection parameters and manages queries.
 
-Developed using modular Python scripts for scalability and maintenance.
+Implementation Details
 
-Connected the frontend interface with backend logic and database operations.
+Developed using object-oriented programming principles for better modularity and maintenance.
 
-Implemented CRUD (Create, Read, Update, Delete) operations for all modules.
+GUI implemented using Java Swing with intuitive forms and buttons.
 
-Validated user inputs and ensured data consistency across the system.
+CRUD operations (Create, Read, Update, Delete) implemented across all major modules.
 
-Results
+Error handling and data validation incorporated for reliability.
 
-Successfully built an interactive and user-friendly system.
-
-Streamlined data management for students, faculty, and administrators.
-
-Reduced manual errors and improved data accessibility.
-
-Provided a scalable foundation for future feature integration such as notifications, fee management, and reporting tools.
-
-Future Enhancements
-
-Integration of online payment and fee tracking system.
-
-Implementation of analytics dashboards for performance insights.
-
-Cloud-based deployment for multi-campus access.
-
-Mobile application for students and faculty.
+JDBC used for real-time interaction with the MySQL database.
